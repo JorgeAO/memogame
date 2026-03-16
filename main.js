@@ -17,6 +17,16 @@ let isGameActive = false;
 // DOM Elements
 const setupMenu = document.getElementById('setup-menu');
 const gameBoard = document.getElementById('game-board');
+
+// Register Service Worker for PWA installation
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('SW Registered'))
+            .catch(err => console.log('SW Error', err));
+    });
+}
+
 const winScreen = document.getElementById('win-screen');
 const timerDisplay = document.getElementById('timer');
 const movesDisplay = document.getElementById('moves');
