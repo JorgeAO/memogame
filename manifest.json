@@ -1,0 +1,23 @@
+{
+  "name": "MemoGame Puzzles",
+  "short_name": "MemoGame",
+  "description": "Un divertido juego de memoria para niños",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#764ba2",
+  "theme_color": "#764ba2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

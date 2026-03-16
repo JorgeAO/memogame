@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoGame - Juego de Memoria para Niños</title>
+    <meta name="description" content="Un colorido y divertido juego de memoria diseñado para niños con diferentes niveles de dificultad.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Mobile specific meta tags -->
+    <meta name="theme-color" content="#764ba2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>MemoGame 🧩</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">Tiempo:</span>
+                    <span id="timer">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Movimientos:</span>
+                    <span id="moves">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="game-container">
+            <!-- Menú de Selección -->
+            <div id="setup-menu" class="glass-panel">
+                <h2>¡Vamos a jugar!</h2>
+                <p>Elige el tamaño del tablero:</p>
+                <div class="difficulty-options">
+                    <button class="menu-btn" data-size="12">Fácil (3x4)</button>
+                    <button class="menu-btn" data-size="16">Medio (4x4)</button>
+                    <button class="menu-btn" data-size="20">Difícil (4x5)</button>
+                </div>
+                <div class="theme-selection">
+                    <p>Elige tu tema favorito:</p>
+                    <div class="theme-options">
+                        <button class="theme-btn active" data-theme="animals">🐾 Animales</button>
+                        <button class="theme-btn" data-theme="toys">🧸 Juguetes</button>
+                        <button class="theme-btn" data-theme="space">🚀 Espacio</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tablero de Juego -->
+            <div id="game-board" class="hidden"></div>
+        </main>
+
+        <!-- Pantalla de Victoria -->
+        <div id="win-screen" class="hidden glass-panel overlay">
+            <div class="win-content">
+                <h2>¡Increíble! 🎉</h2>
+                <p>Has ganado el juego.</p>
+                <div class="final-stats">
+                    <p>Tiempo final: <span id="final-timer">00:00</span></p>
+                    <p>Movimientos totales: <span id="final-moves">0</span></p>
+                </div>
+                <button id="play-again-btn" class="primary-btn">Jugar de nuevo</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Hecho con ❤️ para aprender jugando</p>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
