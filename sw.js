@@ -1,12 +1,12 @@
-const CACHE_NAME = 'memogame-v2';
+const CACHE_NAME = 'memogame-v3';
 const ASSETS = [
-  '/memogame/',
-  '/memogame/index.html',
-  '/memogame/style.css',
-  '/memogame/main.js',
-  '/memogame/manifest.json',
-  '/memogame/icon.png',
-  '/memogame/icon-512.png'
+  './',
+  './index.html',
+  './style.css',
+  './main.js',
+  './manifest.json',
+  './icon.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
